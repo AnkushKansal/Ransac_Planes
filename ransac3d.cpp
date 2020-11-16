@@ -1,11 +1,10 @@
-/* \author Aaron Brown */
 // Quiz on implementing simple RANSAC line fitting
 
-#include "../../render/render.h"
+#include "render/render.h"
 #include <unordered_set>
-#include "../../processPointClouds.h"
+#include "ProcessPointClouds/processPointClouds.h"
 // using templates for processPointClouds so also include .cpp to help linker
-#include "../../processPointClouds.cpp"
+#include "ProcessPointClouds/processPointClouds.cpp"
 
 pcl::PointCloud<pcl::PointXYZ>::Ptr CreateData()
 {
@@ -125,7 +124,7 @@ int main ()
 	pcl::visualization::PCLVisualizer::Ptr viewer = initScene();
 
 	// Create data
-	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = CreateData();
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = CreateData3D();
 	
 
 	// TODO: Change the max iteration and distance tolerance arguments for Ransac function
